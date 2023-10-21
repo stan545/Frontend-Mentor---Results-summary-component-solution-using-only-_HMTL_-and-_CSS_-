@@ -38,13 +38,6 @@
     --white: hsl(0,0%,100%);
 }
 
-.attribution {
-    font-size: 11px; text-align: center;
-}
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -55,14 +48,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.125rem;
+    font-size: 18px;
     min-height: 100vh;
     font-family: xryMedium;
 }
 
 .container{
     display: flex;
-    max-width: 600px;
+    max-width: 750px;
     width: 100%;
     background-color: var(--white);
     border-radius: 2rem;
@@ -85,11 +78,20 @@ body{
     align-items: center;
     gap: 2rem;
     text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.card .left-title, .card .grade{
+    font-size: 1.5rem;
+}
+
+.card .grade{
+    font-weight: 800;
 }
 
 .circle-result {
     display: flex;
-    /* border: none; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -97,11 +99,26 @@ body{
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
+    line-height: 1.18;
+}
+
+.card .circle-result .circle-title{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.card .circle-result .circle-text{
+    font-size: .8rem;
 }
 
 .right-container{
     justify-content: space-between;
     gap: 1.7rem;
+}
+
+.card .right-title{
+    font-size: 1.17rem;
+    font-weight: 700;
 }
 
 .data-container{
@@ -116,14 +133,17 @@ body{
     flex-wrap: wrap;
     padding: .8rem;
     border-radius: .5rem;
-    font-weight: bold;
-    color: #000;
+}
+
+.data .score{
+    font-weight: 600;
 }
 
 .category{
     display: flex;
     gap: .5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 .score span{
     color: #555;
@@ -144,16 +164,20 @@ body{
     background: hsl(234,85%,45%, 0.1);
 }
 
-.reaction .category h5{
+.category .category-name{
+    font-size: 1rem;
+}
+
+.reaction .category{
     color: var(--light-red);
 }
-.memory .category h5{
+.memory .category .category-name{
     color: var(--orangey-yellow);
 }
-.verbal .category h5{
+.verbal .category .category-name{
     color: var(--green-teal);
 }
-.visual .category h5{
+.visual .category .category-name{
     color: var(--cobalt-blue);
 }
 
@@ -180,7 +204,7 @@ body{
     background: linear-gradient(to bottom, var(--sqr-bg-tp-lit-slate-bl), var(--sqr-bg-btm-lit-ryl-bl));
 }
 
-@media (max-width: 375px){
+@media (max-width: 529px){
     .container{
         flex-direction: column;
         border-radius: 0;
